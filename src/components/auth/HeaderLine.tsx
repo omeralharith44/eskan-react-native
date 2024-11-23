@@ -21,7 +21,7 @@ export const HeaderLine: React.FC<TProps> = ({ iconName }) => {
           style={styles.topButton}
           onPress={() => navigation.goBack()}
         >
-          <Icon name={iconName ?? "md-close"} size={32} color="lightgray" />
+          <Icon name={iconName ?? "close"} size={32} color="lightgray" />
         </TouchableOpacity>
       </View>
     </SafeAreaView>

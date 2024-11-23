@@ -53,22 +53,22 @@ const getMenuItems = (
   },
   {
     title: getString("About Us"),
-    iconName: "ios-business",
+    iconName: "business",
     navigateToScreen: NavigationNames.AboutUsScreen,
   },
   {
     title: getString("Contact Us"),
-    iconName: "ios-mail",
+    iconName: "mail",
     actionName: "openEmail",
   },
   {
     title: getString("Privacy Policy"),
-    iconName: "ios-leaf",
+    iconName: "leaf",
     navigateToScreen: NavigationNames.PrivacyPolicyScreen,
   },
   {
     title: getString("Settings"),
-    iconName: "md-settings",
+    iconName: "settings",
     actionName: "openSettings",
   },
 ];
@@ -87,7 +87,7 @@ export const MenuScreen = () => {
       ...menuItems,
       {
         title: getString("Logout"),
-        iconName: "md-log-out",
+        iconName: "log-out",
         actionName: "logout",
       },
     ];
@@ -137,7 +137,7 @@ export const MenuScreen = () => {
               </View>
               <Text style={styles.titleText}>{item.title}</Text>
               <Ionicons
-                name="ios-arrow-forward"
+                name="arrow-forward"
                 size={24}
                 color={Theme.colors.gray}
                 style={{

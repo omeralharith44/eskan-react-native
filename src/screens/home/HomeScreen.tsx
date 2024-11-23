@@ -4,11 +4,11 @@ import {
   Animated,
   Dimensions,
   FlatList,
+  I18nManager,
+  RefreshControl,
   ScrollView,
   StyleSheet,
   View,
-  RefreshControl,
-  I18nManager,
 } from "react-native";
 import SafeAreaView from "react-native-safe-area-view";
 import Carousel from "react-native-snap-carousel";
@@ -22,7 +22,7 @@ import {
   Separator,
 } from "../../components";
 import { useLocalization } from "../../localization";
-import { Property, DashboardModel } from "../../models";
+import { DashboardModel, Property } from "../../models";
 import NavigationNames from "../../navigations/NavigationNames";
 import { DashboardService } from "../../services";
 import { Theme } from "../../theme";

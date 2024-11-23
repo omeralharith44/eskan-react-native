@@ -1,6 +1,6 @@
-import axios from "axios";
-import React, { useState, Children, useEffect } from "react";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import axios from "axios";
+import React, { Children, useEffect, useState } from "react";
 
 import { User } from "../models";
 
@@ -24,6 +24,7 @@ export const AuthenticationProvider: React.FC<{ user: User }> = (props) => {
   const [user, setUser] = useState<User>();
 
   const login = async (user: User) => {
+    console.log(user);
     axios.defaults.headers["Authorization"] =
       "Bearer " + (await AsyncStorage.getItem("AccessToken"));
     setUser(user);

@@ -31,16 +31,16 @@ export const tabScreenOptions: (props: {
     let iconName = "";
     switch (route.name) {
       case NavigationNames.HomeTab:
-        iconName = "ios-home";
+        iconName = "home";
         break;
       case NavigationNames.SearchTab:
-        iconName = "ios-search";
+        iconName = "search";
         break;
       case NavigationNames.ProfileTab:
-        iconName = "md-person";
+        iconName = "person";
         break;
       case NavigationNames.MenuTab:
-        iconName = "ios-menu";
+        iconName = "menu";
         break;
     }
     return <Ionicons name={iconName} size={28} color={color} />;

@@ -48,7 +48,6 @@ export const ProfileScreen = () => {
   };
 
   const onPressChangeImage = async () => {
-
     try {
       const result: any = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
@@ -89,7 +88,7 @@ export const ProfileScreen = () => {
           >
             <Box style={styles.changeImageButtonBox}>
               <Ionicons
-                name="md-refresh"
+                name="refresh"
                 size={18}
                 color={Theme.colors.primaryColor}
                 style={{ marginTop: 2 }}
@@ -106,7 +105,7 @@ export const ProfileScreen = () => {
             {
               title: getString("Favorite Properties"),
               subtitle: getString("Liked Properties"),
-              iconName: "ios-heart",
+              iconName: "heart",
               iconColor: "#EB5757",
               navigateToScreen: NavigationNames.LikedPropertiesScreen,
             },
@@ -120,21 +119,21 @@ export const ProfileScreen = () => {
             {
               title: getString("Show Request"),
               subtitle: getString("Show All Requests"),
-              iconName: "ios-file-tray-full",
+              iconName: "file-tray-full",
               iconColor: Theme.colors.green,
               navigateToScreen: NavigationNames.ShowRequestScreen,
             },
             {
               title: getString("Add Property"),
               subtitle: getString("Add Des Property"),
-              iconName: "md-add-circle",
+              iconName: "add-circle",
               iconColor: "#2D9CDB",
               navigateToScreen: NavigationNames.AddPropertyScreen,
             },
             {
               title: getString("My Request"),
               subtitle: getString("My Request Des"),
-              iconName: "ios-egg",
+              iconName: "egg",
               iconColor: "#27AE60",
               navigateToScreen: NavigationNames.MyRequestScreen,
             },
@@ -161,7 +160,7 @@ export const ProfileScreen = () => {
                       </Text>
                     </View>
                     <Ionicons
-                      name="ios-arrow-forward"
+                      name="arrow-forward"
                       size={24}
                       color={Theme.colors.primaryColor}
                       style={{

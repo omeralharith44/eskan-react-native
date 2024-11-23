@@ -5,11 +5,11 @@ import SafeAreaView from "react-native-safe-area-view";
 
 import {
   HeaderLine,
+  KeyboardView,
   PrimaryButton,
   Separator,
-  TextInput,
-  KeyboardView,
   Text,
+  TextInput,
 } from "../../components";
 import { AuthenticationContext } from "../../context";
 import { useLocalization } from "../../localization";
@@ -30,6 +30,7 @@ export const LoginScreen = () => {
       Alert.alert(getString("Required Login Inputs"));
       return;
     }
+    console.log(username, password);
     AuthService.login(username, password)
       .then(async (user) => {
         await authContext.login(user);

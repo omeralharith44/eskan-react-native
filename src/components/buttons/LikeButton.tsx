@@ -13,7 +13,7 @@ type TProps = {
 export const LikeButton: React.FC<TProps> = ({ isLiked, style, onClick }) => {
   return (
     <CircleIconButton
-      iconName={isLiked ? "md-heart" : "md-heart-outline"}
+      iconName={isLiked ? "heart" : "heart-outline"}
       iconColor={isLiked ? "#FE346E" : Theme.colors.gray}
       style={style}
       onPress={onClick}

@@ -116,7 +116,7 @@ export const PropertyDetailScreen = () => {
         <HeaderButtons HeaderButtonComponent={IoniconsHeaderButton}>
           <Item
             title="share"
-            iconName="md-share-social"
+            iconName="share-social"
             onPress={() =>
               Share.share({
                 title: "asdasd",
@@ -146,9 +146,10 @@ export const PropertyDetailScreen = () => {
       <ScrollView
         style={styles.scrollView}
         scrollEventThrottle={16}
-        onScroll={Animated.event([
-          { nativeEvent: { contentOffset: { y: animation } } },
-        ], { useNativeDriver: false })}
+        onScroll={Animated.event(
+          [{ nativeEvent: { contentOffset: { y: animation } } }],
+          { useNativeDriver: false }
+        )}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollViewContainer}
       >
@@ -198,7 +199,11 @@ export const PropertyDetailScreen = () => {
               </Text>
             </View>
             <View style={styles.propertyContent}>
-              <FontAwesome name="building" size={20} color={Theme.colors.yellow} />
+              <FontAwesome
+                name="building"
+                size={20}
+                color={Theme.colors.yellow}
+              />
               <Text style={styles.propertyTitle}>
                 {getString("parkingWithCount", {
                   count: model.parkingCount,
@@ -258,7 +263,7 @@ export const PropertyDetailScreen = () => {
                     key={`featureKey${index}`}
                   >
                     <Ionicons
-                      name="ios-checkmark-circle-outline"
+                      name="checkmark-circle-outline"
                       color={Theme.colors.primaryColorDark}
                       size={22}
                     />
@@ -309,14 +314,14 @@ export const PropertyDetailScreen = () => {
           </View>
           <CircleIconButton
             iconColor={Theme.colors.primaryColor}
-            iconName="ios-call"
+            iconName="call"
             iconSize={23}
             size={46}
             onPress={() => Linking.openURL(`tel:${model.user.phoneNumber}`)}
           />
           <CircleIconButton
             iconColor={Theme.colors.primaryColor}
-            iconName="ios-mail"
+            iconName="mail"
             iconSize={25}
             size={46}
             style={{ marginStart: 16 }}
